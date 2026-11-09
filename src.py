@@ -57,3 +57,16 @@ print(f"F1 Score:  {f1:.4f}")
 print(f"ROC AUC:   {roc_auc:.4f}")
 print(f"PR AUC:    {ap_score:.4f}")
 print("Confusion Matrix:\n", cm)
+
+#2x2 Plot Visualizations
+plt.figure(figsize=(12, 10))
+
+# Subplot 1: Target Class Distribution
+plt.subplot(2, 2, 1)
+counts = df["quality_binary"].value_counts().sort_index()
+plt.bar(["Low/Med (<6)", "High (>=6)"], counts.values, color=["#e74c3c", "#2ecc71"])
+plt.title("Binary Quality Distribution")
+plt.xlabel("Quality Class")
+plt.ylabel("Count")
+for i, v in enumerate(counts.values):
+    plt.text(i, v + 10, str(v), ha="center", fontweight="bold")
