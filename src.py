@@ -20,17 +20,40 @@ if "Id" in df.columns:
 print("Dataset shape:", df.shape)
 print("Columns:", list(df.columns))
 
-if "quality" not in df.columns:
-    print("Error: quality column missing")
+# Train/Test Split & Feature Scaling
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
 
-# Target Binarization
-df["quality_binary"] = (df["quality"] >= 6).astype(int)
-print("Binary target distribution:")
-print(df["quality_binary"].value_counts())
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
 
-feature_cols = [col for col in df.columns if col not in ["quality", "quality_binary"]]
-X = df[feature_cols]
-y = df["quality_binary"]
+# Model Training
+model = LogisticRegression(max_iter=1000, random_state=42)
+model.fit(X_train_scaled, y_train)
 
-print("Feature matrix shape:", X.shape)
-print("Target vector shape:", y.shape)
+y_pred = model.predict(X_test_scaled)
+y_prob = model.predict_proba(X_test_scaled)[:, 1]
+
+# Metric Evaluation
+acc = accuracy_score(y_test, y_pred)
+prec = precision_score(y_test, y_pred)
+rec = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+cm = confusion_matrix(y_test, y_pred)
+
+# Curve Calculations
+fpr, tpr, _ = roc_curve(y_test, y_prob)
+roc_auc = auc(fpr, tpr)
+p_curve, r_curve, _ = precision_recall_curve(y_test, y_prob)
+ap_score = average_precision_score(y_test, y_prob)
+
+print("--- Model Evaluation Metrics ---")
+print(f"Accuracy:  {acc:.4f}")
+print(f"Precision: {prec:.4f}")
+print(f"Recall:    {rec:.4f}")
+print(f"F1 Score:  {f1:.4f}")
+print(f"ROC AUC:   {roc_auc:.4f}")
+print(f"PR AUC:    {ap_score:.4f}")
+print("Confusion Matrix:\n", cm)
