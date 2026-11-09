@@ -70,3 +70,14 @@ plt.xlabel("Quality Class")
 plt.ylabel("Count")
 for i, v in enumerate(counts.values):
     plt.text(i, v + 10, str(v), ha="center", fontweight="bold")
+
+# Subplot 2: Confusion Matrix Heatmap
+plt.subplot(2, 2, 2)
+plt.imshow(cm, cmap="Blues", interpolation="nearest")
+plt.title("Confusion Matrix")
+plt.colorbar()
+plt.xticks([0, 1], ["Pred 0", "Pred 1"])
+plt.yticks([0, 1], ["True 0", "True 1"])
+for i in range(2):
+    for j in range(2):
+        plt.text(j, i, str(cm[i, j]), ha="center", va="center", color="red", fontweight="bold")
