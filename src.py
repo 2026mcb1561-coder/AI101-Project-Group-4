@@ -90,3 +90,16 @@ plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.title("ROC Curve")
 plt.legend(loc="lower right")
+
+# Subplot 4: Precision-Recall Curve
+plt.subplot(2, 2, 4)
+plt.plot(r_curve, p_curve, color="#9b59b6", lw=2, label=f"PR curve (AP = {ap_score:.2f})")
+plt.xlabel("Recall")
+plt.ylabel("Precision")
+plt.title("Precision-Recall Curve")
+plt.legend(loc="lower left")
+
+plt.tight_layout()
+plt.savefig(output_path, dpi=300)
+plt.close()
+print(f"Plot saved successfully to {output_path}")
