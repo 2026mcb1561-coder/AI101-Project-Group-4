@@ -81,3 +81,12 @@ plt.yticks([0, 1], ["True 0", "True 1"])
 for i in range(2):
     for j in range(2):
         plt.text(j, i, str(cm[i, j]), ha="center", va="center", color="red", fontweight="bold")
+
+# Subplot 3: ROC Curve
+plt.subplot(2, 2, 3)
+plt.plot(fpr, tpr, color="#3498db", lw=2, label=f"ROC curve (AUC = {roc_auc:.2f})")
+plt.plot([0, 1], [0, 1], color="navy", lw=1.5, linestyle="--")
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("ROC Curve")
+plt.legend(loc="lower right")
