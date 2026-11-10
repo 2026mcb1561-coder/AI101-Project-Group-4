@@ -1,26 +1,26 @@
 # Problem Statement
 
-## Project Title
+## **Project Title**
 Wine Quality Prediction Using Logistic Regression
 
-## Problem
+## **Problem**
 The quality of wine is normally judged by human experts through tasting, which is slow, costly and subjective. Physicochemical properties of a wine, such as acidity, sugar, sulphates and alcohol, can be measured objectively in a laboratory. Identifying the quality of a wine early from these measurements can help producers screen samples faster and more consistently.
 
 This project aims to use the physicochemical properties of wine samples to build a machine learning model that can classify whether a wine is of good quality or not.
 
-## Project Objective
+## **Project Objective**
 The objective is to develop a Logistic Regression classification model that predicts whether a wine is of good quality (quality score 6 or above) or not (quality score below 6) based on the available features in the dataset.
 
 The project will also involve data preprocessing, model training, testing and evaluation using appropriate classification metrics.
 
-## Dataset Information
-- Dataset name: WineQT (Wine Quality Dataset, Vinho Verde wine)
-- Dataset source: WineQT.csv (provided in the `data` folder of the GitHub repository); derived from the UCI Wine Quality dataset
-- Number of records: 1143
-- Number of columns: 13 (11 input features, the quality score and an Id column)
-- Target column: quality (converted into a binary class: Good if quality >= 6, Not good if quality < 6)
+## **Dataset Information**
+- **Dataset name:** WineQT (Wine Quality Dataset, Vinho Verde wine)
+- **Dataset source:** WineQT.csv (provided in the `data` folder of the GitHub repository); derived from the UCI Wine Quality dataset
+- **Number of records:** 1143
+- **Number of columns:** 13 (11 input features, the quality score and an Id column)
+- **Target column:** quality (converted into a binary class: Good if quality >= 6, Not good if quality < 6)
 
-## Expected Outcome
+## **Expected Outcome**
 Build an educational machine learning model that predicts the wine quality class using Logistic Regression.
 
 The model's performance will be evaluated using suitable classification metrics such as accuracy, precision, recall, F1-score, ROC AUC and PR AUC.
