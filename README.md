@@ -2,7 +2,8 @@
 
 Predicts the quality score (0-10) of Portuguese "Vinho Verde" wine from its physicochemical properties (pandas, matplotlib, scikit-learn).
 
-![AI101 Mini-Project](https://img.shields.io/badge/AI101-Mini--Project-blue) ![Team](https://img.shields.io/badge/Team-[FILL:%20number]-lightblue) ![Python](https://img.shields.io/badge/Python-3.10%2B-green)
+![AI101 Mini-Project](https://img.shields.io/badge/AI101-Mini--Project-blue) ![Team](https://img.shields.io/badge/Team-Group_4
+-lightblue) ![Python](https://img.shields.io/badge/Python-3.10%2B-green)
 
 ---
 
