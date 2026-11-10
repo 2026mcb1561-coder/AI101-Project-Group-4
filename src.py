@@ -10,7 +10,6 @@ from sklearn.metrics import (
 )
 
 data_path = "data/WineQT.csv"
-output_path = "outputs/binary_wine_quality.png"
 
 # Load & Clean Data
 df = pd.read_csv(data_path)
@@ -20,7 +19,6 @@ if "Id" in df.columns:
 print("Dataset shape:", df.shape)
 print("Columns:", list(df.columns))
 
-# --- RESTORED MISSING BLOCK ---
 if "quality" not in df.columns:
     print("Error: quality column missing")
 
@@ -31,7 +29,6 @@ print(df["quality_binary"].value_counts())
 feature_cols = [col for col in df.columns if col not in ["quality", "quality_binary"]]
 X = df[feature_cols]
 y = df["quality_binary"]
-# ------------------------------
 
 # Train/Test Split & Feature Scaling
 X_train, X_test, y_train, y_test = train_test_split(
@@ -113,9 +110,7 @@ plt.title("Precision-Recall Curve")
 plt.legend(loc="lower left")
 
 plt.tight_layout()
-plt.savefig(output_path, dpi=300)
-plt.close()
-print(f"Plot saved successfully to {output_path}")
+plt.show()
 
 print("--- Top 3 Important Features ---")
 coefs = pd.Series(model.coef_[0], index=feature_cols).abs().sort_values(ascending=False)
