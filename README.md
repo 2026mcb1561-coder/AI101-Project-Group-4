@@ -148,7 +148,8 @@ The data file is included in the repository, so no download step is needed. All 
 
 When the code runs correctly you should see something like this:
 
-![Expected output](docs/output_screenshot.png)
+<img width="3600" height="3000" alt="output" src="https://github.com/user-attachments/assets/fdedbcc1-53c2-4747-ae1b-0febb3a0aa5d" />
+
 
 
 
