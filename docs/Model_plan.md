@@ -32,7 +32,6 @@ will also be used.
 - ROC Curve
 - Precision-Recall Curve
 
-## Results
 
 ## Results
 
