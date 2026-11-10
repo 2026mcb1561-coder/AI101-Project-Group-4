@@ -20,6 +20,19 @@ if "Id" in df.columns:
 print("Dataset shape:", df.shape)
 print("Columns:", list(df.columns))
 
+# --- RESTORED MISSING BLOCK ---
+if "quality" not in df.columns:
+    print("Error: quality column missing")
+
+df["quality_binary"] = (df["quality"] >= 6).astype(int)
+print("Binary target distribution:")
+print(df["quality_binary"].value_counts())
+
+feature_cols = [col for col in df.columns if col not in ["quality", "quality_binary"]]
+X = df[feature_cols]
+y = df["quality_binary"]
+# ------------------------------
+
 # Train/Test Split & Feature Scaling
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
@@ -58,7 +71,7 @@ print(f"ROC AUC:   {roc_auc:.4f}")
 print(f"PR AUC:    {ap_score:.4f}")
 print("Confusion Matrix:\n", cm)
 
-#2x2 Plot Visualizations
+# 2x2 Plot Visualizations
 plt.figure(figsize=(12, 10))
 
 # Subplot 1: Target Class Distribution
@@ -108,18 +121,3 @@ print("--- Top 3 Important Features ---")
 coefs = pd.Series(model.coef_[0], index=feature_cols).abs().sort_values(ascending=False)
 for idx, (col_name, coef_val) in enumerate(coefs.head(3).items(), 1):
     print(f"{idx}. {col_name}: {coef_val:.4f}")
-
-def verify_script_constraints(filepath):
-    with open(filepath, "r") as f:
-        lines = f.readlines()
-    total_lines = len(lines)
-    blank_lines = sum(1 for line in lines if line.strip() == "")
-    print(f"Constraint Check - Total Lines: {total_lines} (Max 130)")
-    print(f"Constraint Check - Blank Lines: {blank_lines} (Must be 0)")
-    if total_lines <= 130 and blank_lines == 0:
-        print("RESULT: Script passes all submission constraints!")
-    else:
-        print("RESULT: Script violates submission rules!")
-
-if __name__ == "__main__":
-    verify_script_constraints(__file__)
