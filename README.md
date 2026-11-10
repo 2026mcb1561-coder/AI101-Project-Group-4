@@ -133,7 +133,7 @@ Run these commands in order from the project's main folder:
 1. Make sure the virtual environment is activated (Setup, Step 3).
 2. Run the main script:
    ```bash
-   python src/main.py
+   python src.py
    ```
 3. The script loads `data/WineQT.csv`, trains the model, prints the evaluation scores, and saves plots in `outputs/`.
 4. Expected runtime: under 20 second.
