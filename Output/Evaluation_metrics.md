@@ -21,13 +21,13 @@ The model was evaluated on the test set (20% of the data).
      #  Feature          Regression Coefficient(Standardized)              Impact on Wine Quality
     # I. Alcohol                 +0.3082                                  Very High Positive Impact
     # II. Sulphates              +0.1553                                   High Positive Impact
-   #  III. Citric Acid           +0.0043                                    Minor Positive Impact
-  #   IV.  Residual Sugar        +0.0230                                     Moderate Positive Impact
-  #   V. Free SO₂                +0.0461                                     Moderate Positive Impact
-   #  VI. Fixed acidity          +0.0250                                     Moderate Positive Impact
-  #   VII. pH                    -0.0638                                     Moderate Negative Impact
-  #   VIII. Chlorides            -0.0882                                     Moderate Negative Impact
-  #   IX.  Total   SO₂           -0.1084                                     High Negative Impact
-  #   X.   Density               -0.0335                                     Moderate Negative Impact
-  #   XI. Volatile acidity       -0.1944                                      High Negative Impact
+    #  III. Citric Acid           +0.0043                                    Minor Positive Impact
+    # IV.  Residual Sugar        +0.0230                                     Moderate Positive Impact
+    #  V. Free SO₂                +0.0461                                     Moderate Positive Impact
+    #  VI. Fixed acidity          +0.0250                                     Moderate Positive Impact
+    #  VII. pH                    -0.0638                                     Moderate Negative Impact
+    #  VIII. Chlorides            -0.0882                                     Moderate Negative Impact
+    #  IX.  Total   SO₂           -0.1084                                     High Negative Impact
+    #  X.   Density               -0.0335                                     Moderate Negative Impact
+    #  XI. Volatile acidity       -0.1944                                      High Negative Impact
     #     Standardized Model Intercept: +5.6360        
