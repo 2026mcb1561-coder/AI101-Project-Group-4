@@ -72,7 +72,8 @@ Load data  ->  Clean and explore (EDA)  ->  Train/test split  ->  Train model(s)
 
 ```
 AI101-Project-Group-4/
-├── Output/                                  # plots created by the code
+├── Output/
+|   ├── Evaluation_metrics.md                               
 │   ├── binary_quality_distribution.png
 │   ├── confusion_matrix.png
 │   ├── precision_recall_curve.png
