@@ -1,4 +1,3 @@
-## Results
 
 The model was evaluated on the test set (20% of the data).
 
