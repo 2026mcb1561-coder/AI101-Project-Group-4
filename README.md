@@ -70,21 +70,20 @@ Load data  ->  Clean and explore (EDA)  ->  Train/test split  ->  Train model(s)
 
 ## 4. Project Structure
 
-[FILL: Edit this to match your real folders and files exactly.]
-
 ```
-wine-quality-predictor/
+AI101-Project-Group-4/
+├── Output/                                  # plots created by the code
+│   ├── binary_quality_distribution.png
+│   ├── confusion_matrix.png
+│   ├── precision_recall_curve.png
+│   └── roc_curve.png
 ├── data/
-│   └── winequality-red.csv        # dataset used by the code
-├── src/
-│   ├── main.py                    # entry point: run this file
-│   └── [other-file].py            # [FILL: what it does]
-├── outputs/                       # plots and results are saved here
-├── docs/
-│   ├── Team[NN]_slides.pdf        # 5-slide presentation
-│   └── output_screenshot.png      # screenshot of expected output
-├── requirements.txt               # libraries and pinned versions
-└── README.md
+│   └── WineQT.csv                           # dataset used by the code
+├── docs/                                    # supporting files
+├── Wine Quality Binary Classification ...   # 5-slide presentation (.pptx)
+├── README.md
+├── requirements.txt                         # libraries and pinned versions
+└── src.py                                   # main script: run this file
 ```
 
 ---
