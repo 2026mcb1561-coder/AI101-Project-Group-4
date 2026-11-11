@@ -176,7 +176,7 @@ The Logistic Regression model reached an accuracy of 0.7773 and a ROC AUC of 0.8
 ## 8. Links
 
 - **Slides (5):** https://gamma.app/docs/Wine-Quality-Binary-Classification-Project-2kkf6tcxd4vd1qr
-- **Video (max 5:00):** [FILL: paste the unlisted YouTube/Drive link, or the file path if uploaded to this repo]
+- **Video (max 5:00):** (https://drive.google.com/file/d/1CJuq6bn_S495eLW24tJn8wegiFzBywT6/view?usp=drivesdk)
 
 ---
 
