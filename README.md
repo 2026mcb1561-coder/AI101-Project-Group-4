@@ -180,6 +180,7 @@ The Logistic Regression model reached an accuracy of 0.7773 and a ROC AUC of 0.8
 
 ## 9. AI-use Disclosure
 
-- Claude: used to learn and understand the project requirements, GitHub, virtual environments and README structure; helped draft the README template and suggested code for saving the individual plots. We edited the README with our own details and results.
-- Gemini: generated the first draft of the Logistic Regression code, which we then modified (file paths, metrics and plots) and ran ourselves.
-- All code was run by us, every result in this README comes from our own run, and every team member can explain the code. No AI was used to generate the dataset or the results.
+- **Claude:** used to learn and understand the project requirements, GitHub, virtual environments and the README structure. It helped draft the README and the planning documents (problem statement, model plan, evaluation plan, demonstration plan), and suggested code for relative file paths and for saving the individual plots and metrics files. We edited all documents with our own details and results.
+- **Gemini:** generated the first draft of the Logistic Regression code, which we modified (file paths, metrics and plots) and ran ourselves.
+- **ROC curve, precision-recall curve :** these were not covered in our course, so we used AI to learn what they mean and to write the code for them. We then read the code, ran it, and checked that the results are consistent with the other metrics.
+- All code was run by us, and every result in this README comes from our own run. No AI was used to generate the dataset or the results.
