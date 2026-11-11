@@ -103,15 +103,16 @@ cd AI101-Project-Group-4
 **Step 2: Create a virtual environment**
 
 ```bash
-python -m venv venv
+ a) python -m venv venv  ( In case your terminal does not identify python use py instead of 'python'.)
+  b) Grant Permission in Your Current Session (Recommended)
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 ```
 
 **Step 3: Activate the virtual environment**
 
 - Windows:
   ```bash
-  venv\Scripts\activate
-  ```
+.\venv\Scripts\Activate.ps1 
 - macOS / Linux:
   ```bash
   source venv/bin/activate
@@ -134,7 +135,7 @@ Run these commands in order from the project's main folder:
 1. Make sure the virtual environment is activated (Setup, Step 3).
 2. Run the main script:
    ```bash
-   python src.py
+   python src.py (( In case your terminal does not identify python use py instead of 'python'.)
    ```
 3. The script loads `data/WineQT.csv`, trains the model, prints the evaluation scores, and saves plots in `outputs/`.
 4. Expected runtime: under 20 second.
