@@ -112,7 +112,8 @@ cd AI101-Project-Group-4
 
 - Windows:
   ```bash
-.\venv\Scripts\Activate.ps1 
+    .\venv\Scripts\Activate.ps1
+  ```
 - macOS / Linux:
   ```bash
   source venv/bin/activate
